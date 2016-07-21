@@ -1,0 +1,3 @@
+Inderjeet,Singh,1,Methodology,A+
+Abhinav,Shardha,2,Programming,B
+Iqbal,gill,3,Database,A
