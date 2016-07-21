@@ -5,11 +5,27 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
-
+/**
+ * Author: Inderjeet Singh
+ * StudentNumber: 300874118
+ * Description: Driver class for file I/O Exception handling
+ * Version: 0.0.1
+ * DateCreated: July 21rd, 2016
+ * DateModified: July 21rd, 2016
+ */
 namespace Assignment5
 {
+    /**
+    * this class is the "driver" class for my program
+    * @class Program
+    */
     class Program
     {
+        /**Main method of driver class
+         * 
+         * @method Main
+         * param {string} args
+         */
         static void Main(string[] args)
         {
             Menu();
@@ -23,6 +39,7 @@ namespace Assignment5
 
             int choice = 0;
 
+            // While loop for Menu Choices
             while (choice != 2)
             {
                 Console.WriteLine("|=======Student Grades=======|");
@@ -30,7 +47,8 @@ namespace Assignment5
                 Console.WriteLine("| 2) Exit                    |");
                 Console.WriteLine("|============================|");
                 Console.Write("Please Select from above options --> ");
-
+                
+                // Exception handling
                 try
                 {
                     choice = Convert.ToInt32(Console.ReadLine());
@@ -84,7 +102,7 @@ namespace Assignment5
             }
         }
 
-        // Display grade
+        // Displaying grade
         public static void ShowGrade(string pathName, char DELIM)
         {
             string fileName;
@@ -107,6 +125,7 @@ namespace Assignment5
 
                 fileData = reader.ReadLine();
 
+                //output for grade.txt file
                 while (fileData != null)
                 {
                     fields = fileData.Split(DELIM);
@@ -130,7 +149,7 @@ namespace Assignment5
                 Console.WriteLine();
             }
         }
-        // Exiting ++++++++++++++++++++++++++++++++++++++
+        // Exiting 
         public static void Exit()
         {
             Console.WriteLine();
@@ -140,5 +159,5 @@ namespace Assignment5
             Console.ReadKey();
             Console.Clear();
         }
-    }
-}
+    }//End of namespace
+}// end of program
